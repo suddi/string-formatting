@@ -38,12 +38,11 @@
     "prepush": "npm test",
     "security-check": "nsp check --output summary",
     "start": "ntl",
-    "test": "npm run lint && npm run security-check && npm run doctest"
+    "test": "npm run lint && npm run security-check && npm run doctest && npm run coverage && npm run check-coverage"
   },
-  "dependencies": {
-    "proptypes": "^0.14.3"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "chai": "^3.0.0",
     "eslint": "^3.0.0",
     "eslint-config-suddi": "^3.0.0",
     "husky": "^0.12.0",
