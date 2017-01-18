@@ -1,6 +1,6 @@
 machine:
     node:
-        version: '0.12.18'
+        version: '6.9.4'
 test:
     override:
         - source ./bin/ci.sh:
