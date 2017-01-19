@@ -14,6 +14,14 @@ function getFixturesPath(filename) {
     return path.join(__dirname, directory);
 }
 
+function runTest(inputString, options) {
+    try {
+        return StringFormatter.apply(inputString, options);
+    } catch (error) {
+        return error;
+    }
+}
+
 describe('Integration Tests for string-formatting', function () {
     const filenames = fs.readdirSync(getFixturesPath()).filter(function (filename) {
         return filename.endsWith('.js');
@@ -23,8 +31,11 @@ describe('Integration Tests for string-formatting', function () {
         it(`CASE ${index + 1}: Testing ${filename}`, function () {
             const T = require(getFixturesPath(filename));
             const input = T.getInput();
-            const output = StringFormatter.apply(input.inputString, input.opts);
+            const output = runTest(input.inputString, input.opts);
 
+            if (output instanceof Error) {
+                expect(output.message).to.eql(T.getOutput().message);
+            }
             expect(output).to.deep.eql(T.getOutput());
         });
         return filename;
