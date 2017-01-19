@@ -14,7 +14,7 @@ module.exports.getInput = function () {
 
 module.exports.getOutput = function () {
     return [
-        'H, ll',
-        'W, rld!'
+        'H ll',
+        'W rld!'
     ];
 };

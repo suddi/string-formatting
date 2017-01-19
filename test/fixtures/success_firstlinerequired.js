@@ -14,6 +14,6 @@ module.exports.getInput = function () {
 module.exports.getOutput = function () {
     return [
         '',
-        'Hello, World!'
+        'Hello World!'
     ];
 };

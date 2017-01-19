@@ -9,8 +9,68 @@
 
 [![coverage](https://codecov.io/gh/suddi/string-formatting/branch/master/graphs/commits.svg)](https://codecov.io/gh/suddi/string-formatting)
 
-String formatting module for string beautification
+String formatting module for string beautification, splits string optimally over multiple lines.
+
+## Installation
+
+````
+npm install --save string-formatting
+````
+
+## API
+
+````js
+const StringFormatter = require('string-formatting');
+
+StringFormatting.apply(<string-to-be-formatted>, <options>);
+````
+
+Default configuration, can be overriden with user-defined options:
+````js
+{
+    numLines: 1,                            // number of lines to format to (numLines and lengthOfLine have overlapping use, please see below)
+    lengthOfLine: [255],                    // length for each line as a number or length for each specific line in an Array (numLines and lengthOfLine have overlapping use, please see below)
+    firstLineRequired: true,                // whether the first line in the array must have a value, else fail
+    splitTokenRegex: / /,                   // regex to split the string with
+    mergeToken: ' '                         // string to merge the string with in case multiple words join on the same line
+};
+````
+
+*NOTE:* When both `numLines` defined and `lengthOfLine` is defined as an Array (where each line can have multiple lengths).
+`string-formatting` requires that the `numLines` and the length of `lengthOfLine` Array be the same.
+This is because in the scenario where `lengthOfLine` is defined per line, `numLines` is an extraneous value and can be omitted.
 
 ## Usage
 
-Coming soon...
+````js
+const StringFormatter = require('string-formatting');
+
+const output = StringFormatting.apply('Hello World!', {
+    lengthOfLine: [5, 6]                    // the first line is allowed to have a maximum length of 5, the second line, a maximum length of 6
+});
+console.log(output);
+// ['Hello', 'World!']
+
+const output = StringFormatting.apply('Hello World! I am Node.js', {
+    numLines: 2,
+    lengthOfLine: 12
+});
+console.log(output);
+// ['Hello World!', 'I am Node.js']
+
+const output = StringFormatting.apply('Hello World!', {
+    lengthOfLine: [2, 100],
+    firstLineRequired: false
+});
+console.log(output);
+// ['', 'Hello World!']
+
+const output = StringFormatting.apply('Hello World!', {
+    splitTokenRegex: /aeiou/,
+    mergeToken: ';'
+});
+console.log(output);
+// ['H;ll W;rld!']
+````
+
+For more workable examples, please see [fixtures](test/fixtures).
