@@ -12,6 +12,7 @@
 [![coverage](https://codecov.io/gh/suddi/string-formatting/branch/master/graphs/commits.svg)](https://codecov.io/gh/suddi/string-formatting)
 
 String formatting module for string beautification, splits string optimally over multiple lines.
+Can be used for formatting addresses.
 
 ## Installation
 
@@ -38,7 +39,7 @@ Default configuration, can be overriden with user-defined options:
 };
 ````
 
-*NOTE:* When both `numLines` defined and `lengthOfLine` is defined as an Array (where each line can have multiple lengths).
+**NOTE:** When both `numLines` defined and `lengthOfLine` is defined as an Array (where each line can have multiple lengths).
 `string-formatting` requires that the `numLines` and the length of `lengthOfLine` Array be the same.
 This is because in the scenario where `lengthOfLine` is defined per line, `numLines` is an extraneous value and can be omitted.
 
@@ -68,11 +69,12 @@ console.log(output);
 // ['', 'Hello World!']
 
 const output = StringFormatting.apply('Hello World!', {
-    splitTokenRegex: /aeiou/,
+    lengthOfLine: [4, 6],
+    splitTokenRegex: /[aeiou]/,
     mergeToken: ';'
 });
 console.log(output);
-// ['H;ll W;rld!']
+// ['H;ll', 'W;rld!']
 ````
 
 For more workable examples, please see [fixtures](test/fixtures).
