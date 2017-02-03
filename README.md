@@ -78,3 +78,4 @@ console.log(output);
 ````
 
 For more workable examples, please see [fixtures](test/fixtures).
+
