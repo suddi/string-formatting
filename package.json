@@ -1,12 +1,12 @@
 {
   "name": "string-formatting",
   "description": "Parse and format string input into required lengths",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "homepage": "https://www.npmjs.com/package/string-formatting",
   "author": {
     "name": "Sudharshan Ravindran",
-    "email": "suddir@gmail.com",
-    "url": "https://suddi.github.io"
+    "email": "mail@suddi.io",
+    "url": "https://suddi.io"
   },
   "repository": {
     "type": "git",
