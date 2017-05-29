@@ -1,5 +1,7 @@
 # string-formatting
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/suddi/string-formatting.svg)](https://greenkeeper.io/)
+
 [![CircleCI](https://img.shields.io/circleci/project/github/suddi/string-formatting.svg)](https://circleci.com/gh/suddi/string-formatting)
 [![codecov](https://codecov.io/gh/suddi/string-formatting/branch/master/graph/badge.svg)](https://codecov.io/gh/suddi/string-formatting)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9e6b6ea7bc1a40e9ab11ab621949a83e)](https://www.codacy.com/app/Suddi/string-formatting)
