@@ -35,8 +35,9 @@ describe('Integration Tests for string-formatting', function () {
 
             if (output instanceof Error) {
                 expect(output.message).to.eql(T.getOutput().message);
+            } else {
+                expect(output).to.deep.eql(T.getOutput());
             }
-            expect(output).to.deep.eql(T.getOutput());
         });
         return filename;
     });

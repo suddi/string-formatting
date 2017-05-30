@@ -1,7 +1,7 @@
 {
   "name": "string-formatting",
   "description": "Parse and format string input into required lengths",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "homepage": "https://www.npmjs.com/package/string-formatting",
   "author": {
     "name": "Sudharshan Ravindran",
@@ -49,7 +49,7 @@
     "eslint-config-suddi": "^3.0.0",
     "husky": "^0.13.0",
     "istanbul": "^0.4.0",
-    "jsdoctest": "^1.0.0",
+    "jsdoctest": "git+ssh://git@github.com:yamadapc/jsdoctest.git",
     "mocha": "^3.0.0",
     "nsp": "^2.0.0",
     "ntl": "^1.0.0",
