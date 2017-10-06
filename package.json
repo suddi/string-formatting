@@ -1,7 +1,7 @@
 {
   "name": "string-formatting",
   "description": "Parse and format string input into required lengths",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "homepage": "https://www.npmjs.com/package/string-formatting",
   "author": {
     "name": "Sudharshan Ravindran",
