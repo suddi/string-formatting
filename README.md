@@ -5,7 +5,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9e6b6ea7bc1a40e9ab11ab621949a83e)](https://www.codacy.com/app/Suddi/string-formatting)
 [![npm](https://img.shields.io/npm/v/string-formatting.svg)](https://www.npmjs.com/package/string-formatting)
 [![npm](https://img.shields.io/npm/dt/string-formatting.svg)](https://www.npmjs.com/package/string-formatting)
-[![Greenkeeper badge](https://badges.greenkeeper.io/suddi/string-formatting.svg)](https://greenkeeper.io/)
 [![David](https://img.shields.io/david/suddi/string-formatting.svg)](https://david-dm.org/suddi/string-formatting)
 [![David](https://img.shields.io/david/dev/suddi/string-formatting.svg)](https://david-dm.org/suddi/string-formatting?type=dev)
 [![license](https://img.shields.io/github/license/suddi/string-formatting.svg)](https://raw.githubusercontent.com/suddi/string-formatting/master/LICENSE)
